@@ -55,7 +55,7 @@ export default function HomePage() {
               <h3>Titolo Originale: {result.original_title} {result.original_name}</h3>
               <img src={poster} alt="" />
               <p>Lingua:{result.original_language}<img src={setFlags(language)} alt="" style={{width:"35px"}}/> </p>
-              <p>Voto: {stars(vote)}</p>
+              <p> {stars(vote)}</p>
               --------------------------------------------------------------------------------------------------------
             </li>
             )
