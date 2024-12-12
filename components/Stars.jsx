@@ -7,13 +7,13 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
     } else if (vote === 1){
       return <FontAwesomeIcon icon={faStar} />
     }else if (vote === 2){
-      return `2 Stelle`
+      return <p><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
     }else if (vote === 3){
-      return `3 Stelle`
+      return <p><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
     }else if (vote === 4){
-      return `4 Stelle`
+      return <p><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
     }else{
-      return `5 Stelle`
+      return <p><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /></p>
     }
     
   }
