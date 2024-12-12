@@ -5,6 +5,7 @@ import axios from "axios";
 export default function HomePage() {
   const [film, setFilm] = useState("");
   const [results, setResults] = useState([]);
+  
 
   const handleSearch = () => {
     if (!film) return; 
@@ -35,7 +36,11 @@ export default function HomePage() {
         {results.length > 0 ? (
           results.map((result) => (
             <li key={result.id}>
-              {result.title}
+              Titolo: {result.title} <br />
+              Titolo Originale: {result.original_title} <br />
+              Lingua: {result.original_language} <br />
+              Voto: {result.vote_average.toFixed(1)}
+
             </li>
           ))
         ) : (
