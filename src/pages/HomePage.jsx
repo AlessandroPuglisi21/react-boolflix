@@ -2,11 +2,13 @@ import SearchBar from "../../components/SearchBar";
 import { useState } from "react";
 import axios from "axios";
 import Flags from "../../context/Flags";
+import ImgUrl from "../../context/ImgUrl";
 
 export default function HomePage() {
   const [film, setFilm] = useState("");
   const [tvSerie, setTvSerie] = useState("")
   const [results, setResults] = useState([]);
+  
   
   
   const handleSearch = () => {
@@ -38,6 +40,7 @@ export default function HomePage() {
         return Flags.jap
     }
   }
+  
 
   return (
     <>
@@ -47,12 +50,19 @@ export default function HomePage() {
         {results.length > 0 ? (
           results.map((result) => {
             const language = result.original_language
+            const poster = result.poster_path
+          ? `${ImgUrl.IMG_URL}${result.poster_path}`
+          : `${ImgUrl.emptyIMG}`
+
+          
             return(
             <li key={result.id}>
               <h1 style={{color: result.title ? 'black' : 'red'}}>Titolo: {result.title || result.name} </h1>
               <h3>Titolo Originale: {result.original_title} {result.original_name}</h3>
+              <img src={poster} alt="" />
               <p>Lingua:{result.original_language}<img src={flags(language)} alt="" style={{width:"35px"}}/> </p>
               <p>Voto: {result.vote_average.toFixed(1)}</p>
+              --------------------------------------------------------------------------------------------------------
             </li>
             )
           })
