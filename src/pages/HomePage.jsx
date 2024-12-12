@@ -49,7 +49,7 @@ export default function HomePage() {
             const language = result.original_language
             return(
             <li key={result.id}>
-              <h1>Titolo: {result.title} {result.name} </h1>
+              <h1 style={{color: result.title ? 'black' : 'red'}}>Titolo: {result.title || result.name} </h1>
               <h3>Titolo Originale: {result.original_title} {result.original_name}</h3>
               <p>Lingua:{result.original_language}<img src={flags(language)} alt="" style={{width:"35px"}}/> </p>
               <p>Voto: {result.vote_average.toFixed(1)}</p>
