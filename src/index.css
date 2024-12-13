@@ -87,7 +87,7 @@ main{
 
 /* FOOTER */
 .footer-container {
-  background-color: rgb(136, 18, 18);
+  background-color: rgb(70, 5, 5);
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -110,61 +110,100 @@ main{
 /* HEADER */
 
 .header-container{
-background-color: rgb(136, 18, 18);
+background-color: rgb(70, 5, 5);
 padding: 30px;
 
 }
+
+.header-container img{
+    width: 200px;
+}
+
+/* ------------------------------------------ */
+/* SEARCHBUTTON */
+
+.input-bar, button{
+    background-color: rgb(44, 42, 44);
+    padding: 10px;
+    border: none;
+    color: white;
+}
+
+button{
+    background-color: red;
+}
+
+.search-container{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);  
+  }
+
+
 /* --------------------------------------- */
 
 /* MEDIA QUERY */
 @media (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .footer-container div {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .card {
+      width: 250px;
+      height: 400px;
+    }
+  
+    .header-container img {
+      width: 100px;
+    }
   }
-
-  .footer-container div {
-    width: 100%;
-    margin-bottom: 20px;
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    .footer-container div {
+      width: 30%;
+    }
+  
+    .card {
+      width: 270px;
+      height: 450px;
+    }
+  
+    .header-container img {
+      width: 150px;
+    }
   }
-
-  .card {
-    width: 250px;
-    height: 400px;
+  
+  @media (min-width: 1025px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-container div {
+      width: 30%;
+    }
+  
+    .card {
+      width: 300px;
+      height: 500px;
+    }
+  
+    .header-container img {
+      width: 200px;
+    }
   }
-}
-
-
-
-@media (min-width: 601px) and (max-width: 1024px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .footer-container div {
-    width: 30%;
-  }
-
-  .card {
-    width: 270px;
-    height: 450px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer-container div {
-    width: 30%;
-  }
-
-  .card {
-    width: 300px;
-    height: 500px;
-  }
-}

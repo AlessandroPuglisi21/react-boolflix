@@ -7,5 +7,7 @@ export default function setFlags(language) {
         return Flags.ita
     } else if (language === 'ja'){
         return Flags.jap
+    }else {
+      return 'No Flag'
     }
   }

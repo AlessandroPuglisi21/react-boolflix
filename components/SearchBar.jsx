@@ -7,8 +7,8 @@ const handleInput = (e) => {
 }
 
     return(
-    <div>
-        <input type="text" 
+    <div className="search-container">
+        <input className="input-bar" type="text" 
         placeholder="Cerca un film o una serie TV"
         value={film || tvSerie}
         onChange={handleInput}

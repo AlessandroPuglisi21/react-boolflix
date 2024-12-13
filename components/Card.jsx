@@ -19,7 +19,7 @@ export default function Card({ data }) {
   const poster = poster_path
     ? `${ImgUrl.IMG_URL}${poster_path}`
     : `${ImgUrl.emptyIMG}`;
-  const vote = vote_average ? (vote_average / 2).toFixed(1) : "N/A";
+  const vote = (vote_average / 2).toFixed(1)
 
   function TextWithLimit({ text, maxLength }) {
     const truncatedText = text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
