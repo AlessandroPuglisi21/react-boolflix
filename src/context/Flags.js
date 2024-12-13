@@ -4,4 +4,6 @@ const ita = 'https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/2
 
 const jap = 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png'
 
-export default  {usa, ita, jap}
+
+const other = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/PACE_flag_%28peace_sign%29.svg/1200px-PACE_flag_%28peace_sign%29.svg.png' 
+export default  {usa, ita, jap, other}

@@ -8,6 +8,6 @@ export default function setFlags(language) {
     } else if (language === 'ja'){
         return Flags.jap
     }else {
-      return 'No Flag'
+      return Flags.other
     }
   }

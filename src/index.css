@@ -112,6 +112,8 @@ main{
 .header-container{
 background-color: rgb(70, 5, 5);
 padding: 30px;
+display: flex;
+justify-content: space-between;
 
 }
 

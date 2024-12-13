@@ -1,3 +1,4 @@
+import SearchBar from "./SearchBar";
 
 
 export default function Header(){
@@ -6,6 +7,7 @@ export default function Header(){
         <header>
             <div className="header-container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="" />
+                <SearchBar />
             </div>
         </header>
     )

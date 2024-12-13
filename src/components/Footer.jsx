@@ -1,3 +1,5 @@
+import SearchBar from "./SearchBar";
+
 export default function Footer() {
   return (
     <footer>
