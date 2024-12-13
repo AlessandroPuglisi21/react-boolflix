@@ -4,7 +4,7 @@ export default function Header(){
     
     return (
         <header>
-            <div>
+            <div className="header-container">
                 <h1>Boolflix</h1>
             </div>
         </header>

@@ -28,17 +28,20 @@ export default function HomePage() {
 
   return (
     <>
-      <SearchBar film={film} setFilm={setFilm} setTvSerie={setTvSerie} onSearch={handleSearch} />
-      <h1>Risultati Trovati</h1>
-      <div>
-        {results.length > 0 ? (
-          results.map((result) => (
-            <Card key={result.id} data={result} />
-          ))
-        ) : (
-          <p>Nessun risultato trovato.</p>
-        )}
-      </div>
+      <main>
+        <SearchBar film={film} setFilm={setFilm} setTvSerie={setTvSerie} onSearch={handleSearch} />
+        <h1>Risultati Trovati</h1>
+        <div className="card-full">
+          {results.length > 0 ? (
+            results.map((result) => (
+              <Card key={result.id} data={result} />
+            ))
+          ) : (
+            <p>Nessun risultato trovato.</p>
+          )}
+        </div>
+      </main>
+
     </>
   );
 }
